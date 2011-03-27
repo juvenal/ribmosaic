@@ -554,7 +554,7 @@ class WM_OT_ribmosaic_xml_file(rm_context.ExportContext,
         if path:
             self.event = path
          
-        context.window_manager.add_fileselect(self)
+        context.window_manager.fileselect_add(self)
         
         return {'RUNNING_MODAL'}
 
@@ -964,7 +964,7 @@ class WM_OT_ribmosaic_library_set(rm_context.ExportContext,
             err.ReportError(self)
             return {'CANCELLED'}
         
-        context.window_manager.add_fileselect(self)
+        context.window_manager.fileselect_add(self)
         
         return {'RUNNING_MODAL'}
 
@@ -1222,7 +1222,7 @@ class WM_OT_ribmosaic_library_addpanel(rm_context.ExportContext,
             err.ReportError(self)
             return {'CANCELLED'}
         
-        context.window_manager.add_fileselect(self)
+        context.window_manager.fileselect_add(self)
         
         return {'RUNNING_MODAL'}
 
@@ -1391,7 +1391,7 @@ class WM_OT_ribmosaic_pipeline_load(rm_context.ExportContext,
     def invoke(self, context, event):
         wm = context.window_manager
         
-        wm.add_fileselect(self)
+        wm.fileselect_add(self)
         
         return {'RUNNING_MODAL'}
 
@@ -2314,7 +2314,7 @@ class SCENE_OT_ribmosaic_searchpath(rm_context.ExportContext,
         return {'FINISHED'}
     
     def invoke(self, context, event):
-        context.window_manager.add_fileselect(self)
+        context.window_manager.fileselect_add(self)
         
         return {'RUNNING_MODAL'}
 
@@ -2360,7 +2360,7 @@ class SCENE_OT_ribmosaic_exportpath(rm_context.ExportContext,
         return {'FINISHED'}
     
     def invoke(self, context, event):
-        context.window_manager.add_fileselect(self)
+        context.window_manager.fileselect_add(self)
         
         return {'RUNNING_MODAL'}
 
